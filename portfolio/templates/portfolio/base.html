@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Lilian</title>
+    <link rel="stylesheet" href="{% static 'portfolio/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="en-tete">
+            <h1>Lilian Ceccon</h1>
+            <h2>Developpeur web</h2>
+        </div>
+        <nav class="nav-bar">
+         <ul>
+             <li><a href="{% url 'home' %}">Accueil</a></li>
+             <li><a href="{% url 'competences' %}">Competences</a></li>
+             <li><a href="{% url 'projets' %}">Projets</a></li>
+             <li><a href="{% url 'contact' %}">Contact</a></li>
+         </ul>
+        </nav>
+ </header>
+ <main>
+    {% block content %}{% endblock %}
+ </main>
+ <footer class="site-footer">
+    <p>&copy; 2025 - Lilian Ceccon</p>
+</footer>
+    
+</body>
+</html>

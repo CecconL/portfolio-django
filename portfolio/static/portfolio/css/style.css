@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px; /* ou 1000, selon ton design */
+        padding-left: 2rem;
+        padding-right: 2rem; 
+        font-family: 'Inter', sans-serif;
+}
+h1{
+    font-size: xxx-large;
+}
+h1, h2 {
+    font-weight: 600;
+}
+p {
+    font-weight: 400;
+}
+.hero{
+    margin-top: 100px;
+    position: relative;
+}
+.en-tete {
+    gap: 20px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.nav-bar ul {
+    display: flex;              /* met les <li> sur une seule ligne */
+    justify-content: center;   /* centre horizontalement dans le conteneur */
+    gap: 2rem;                 /* espace entre les liens */
+    list-style: none;          /* supprime les puces */
+    padding: 0;                /* enlève les marges internes */
+    margin-top: 1rem;
+  }
+  
+  .nav-bar a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  .image-presentation {
+    
+    position: absolute;
+    top: -70px; /* hauteur vers le haut, ajuste selon l’effet que tu veux */
+    left: 50%; /* positionne le bord gauche au centre du conteneur */
+    transform: translateX(-50%); /* recule l'image de 50% de sa propre largeur */
+    z-index: 2;
+  }
+  
+  .image-presentation img {
+    width: 250px;
+    aspect-ratio: 1 / 1; /* 🔥 force un carré */
+    object-fit: cover;   /* ✂️ recadre l’image sans la déformer */
+    border-radius: 50%;
+    display: block;
+  }
+  
+
+    
+    .text-presentation {
+        position: relative;
+        background-color: #fff;
+        padding: 200px 2rem 2rem 2rem;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-left: 150px;
+        margin-right: 150px;
+        z-index: 1;
+        box-shadow: 0 10px 30px rgba(0,0,0,30%);
+        text-align: center;
+        overflow: hidden;
+      }
+      
+      .text-presentation::before {
+        content: '';
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        right: -30px;
+        bottom: -30px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.142) 40%, transparent 100%);
+        z-index: -1;
+        filter: blur(20px);
+        border-radius: 40px;
+      }
+      
+
+  
